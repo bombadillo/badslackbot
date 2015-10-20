@@ -17,9 +17,9 @@ getUserId = (message) ->
 
 whoWeGoingToAnnoy = (message, userName) ->
   if userName
-    messageText = "I'm off to annoy #{userName}"
+    messageText = "I'm off to annoy @#{userName}"
   else
-    messageText = "I can't find the blighter."    
+    messageText = "I can't find the blighter."
   channel.sendMessageById message.channel, messageText
 
 exports = this
