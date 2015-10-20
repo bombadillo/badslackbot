@@ -14,7 +14,7 @@ names = [
 ]
 
 generate = ->
-  randomIndex = getRandomInt 0, names.length
+  randomIndex = getRandomInt 0, names.length - 1
   return names[randomIndex]
 
 getRandomInt = (min, max) ->
