@@ -2,6 +2,7 @@
 A bot to aggravate and annoy your fellow slackers with!
 
 # Setup
+* `npm install`
 * Add your bots API token to the `botApiToken` property within the config.coffee file.
 * Run the command `node src/index` from the root directory.
 
