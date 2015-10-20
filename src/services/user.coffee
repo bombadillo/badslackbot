@@ -2,9 +2,11 @@ slack = require '../slackClient'
 isNumeric = require './isNumeric'
 
 getUserName = (userId) ->
-  if !isNumeric userId
-    return userId
   user = slack.getUserByID userId
+
+  if !user
+    return false
+
   return user.name
 
 exports = this

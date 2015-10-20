@@ -1,7 +1,7 @@
 Slack = require 'slack-client'
+config = require './config'
 
-slackToken = 'xoxb-12762509828-bgL0ZsbfYIHKcbjM13EcXcH9'
-
+slackToken = config.botApiToken
 autoReconnect = true
 autoMark = true
 

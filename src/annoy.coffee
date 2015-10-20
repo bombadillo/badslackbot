@@ -1,10 +1,8 @@
 slack = require './slackClient'
-userService = require './services/user'
 directMessage = require './services/directMessage'
 horribleNameGenerator = require './services/horribleNameGenerator'
 
-annoyUser = (userId) ->
-  userName = userService.getUserName userId
+annoyUser = (userName) ->
   horrbileName = horribleNameGenerator.generate()
   message = "Hey you #{horrbileName}!"
 
