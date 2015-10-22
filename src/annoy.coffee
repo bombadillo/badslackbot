@@ -5,9 +5,7 @@ horribleNameGenerator = require './services/horribleNameGenerator'
 annoyUser = (userName) ->
   horrbileName = horribleNameGenerator.generate()
   message = "Hey you #{horrbileName}!"
-
   directMessage.sendMessageByUserName userName, message
-  console.log "message #{message} sent to #{userName}"
 
 exports = this
 exports.annoyUser = annoyUser

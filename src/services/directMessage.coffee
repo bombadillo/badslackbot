@@ -1,9 +1,14 @@
 slack = require '../slackClient'
 
 sendMessageByUserName = (userName, message) ->
-  dm = slack.getDMByName userName
-  channel = slack.getChannelGroupOrDMByID dm.id
-  channel.send message
+  user = slack.getUserByName userName
+  dmOpened = slack.openDM user.id
+  if dmOpened
+    dm = slack.getDMByName userName
+    if dm
+      channel = slack.getChannelGroupOrDMByID dm.id
+      channel.send message
+      console.log "message #{message} sent to #{userName}"
 
 exports = this
 exports.sendMessageByUserName = sendMessageByUserName
