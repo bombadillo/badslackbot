@@ -1,1 +1,1 @@
-web: coffee dist/index.coffee
+web: coffee src/index.coffee
