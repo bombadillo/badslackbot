@@ -4,6 +4,8 @@ sendMessageByUserName = (userName, message) ->
   console.log 'user name'
   console.log userName
   user = slack.getUserByName userName
+  console.log 'user'
+  console.log user
   dmOpened = slack.openDM user.id
   console.log 'user ID'
   console.log user.id
