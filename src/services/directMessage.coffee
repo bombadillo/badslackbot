@@ -8,7 +8,6 @@ sendMessageByUserName = (userName, message) ->
   if dm
     channel = slack.getChannelGroupOrDMByID dm.id
     channel.send message
-    console.log "message #{message} sent to #{userName}"
 
 exports = this
 exports.sendMessageByUserName = sendMessageByUserName
