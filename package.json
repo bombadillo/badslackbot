@@ -12,7 +12,7 @@
     "test": "mocha",
     "brewCoffee": "coffee -o dist/ -c src/",
     "hotCoffee": "coffee -o dist/ -cw src/",
-    "hotTests": "coffee -cwo spec/ spec/"    
+    "hotTests": "coffee -cwo spec/ spec/",
     "postinstall": "npm run brewCoffee"
   }
 }
