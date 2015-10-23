@@ -14,6 +14,7 @@ slack.on 'message', (message) ->
   shouldIAnnoyCurrentUser = shouldIAnnoy.shouldIAnnoyUser message
   if shouldIAnnoyCurrentUser
     userToAnnoy = shouldIAnnoyCurrentUser
+    console.log 'before annoy call'
     annoy.annoyUser userToAnnoy
 
 slack.on 'error', (err) ->
