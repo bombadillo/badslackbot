@@ -3,7 +3,7 @@
     "type": "git",
     "url": "https://github.com/bombadillo/badslackbot"
   },
-  "Dependencies": {    
+  "dependencies": {
     "coffee-script": "1.9.0",
     "mocha": "*",
     "slack-client": "^1.4.1"
@@ -12,8 +12,7 @@
     "test": "mocha",
     "brewCoffee": "coffee -o dist/ -c src/",
     "hotCoffee": "coffee -o dist/ -cw src/",
-    "hotTests": "coffee -cwo spec/ spec/",
-    "start": "node dist/index.js",
+    "hotTests": "coffee -cwo spec/ spec/"    
     "postinstall": "npm run brewCoffee"
   }
 }
