@@ -1,21 +1,5 @@
-slack = require './slackClient'
-shouldIAnnoy = require './shouldIAnnoy'
-annoy = require './annoy'
-userToAnnoy = ''
-server = require './services/server'
+bot = require './bot/index'
+server = require './client/services/server'
 
+bot.start()
 server.start()
-
-slack.on 'open', ->
-  console.log "Connected to #{slack.team.name} as @#{slack.self.name}"
-
-slack.on 'message', (message) ->
-  shouldIAnnoyCurrentUser = shouldIAnnoy.shouldIAnnoyUser message
-  if shouldIAnnoyCurrentUser
-    userToAnnoy = shouldIAnnoyCurrentUser
-    annoy.annoyUser userToAnnoy
-
-slack.on 'error', (err) ->
-  console.error "Error", err
-
-slack.login()
