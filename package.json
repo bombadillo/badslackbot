@@ -14,6 +14,7 @@
     "brewCoffee": "coffee -o dist/ -c src/",
     "hotCoffee": "coffee -o dist/ -cw src/",
     "hotTests": "coffee -cwo spec/ spec/",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "postinstall": "npm run brewCoffee"
   }
 }
