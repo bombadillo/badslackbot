@@ -3,8 +3,7 @@
     "type": "git",
     "url": "https://github.com/bombadillo/badslackbot"
   },
-  "devDependencies": {
-    "browserify": "2.5.1",
+  "Dependencies": {    
     "coffee-script": "1.9.0",
     "mocha": "*",
     "slack-client": "^1.4.1"
