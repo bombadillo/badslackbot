@@ -3,6 +3,8 @@ slack = require '../slackClient'
 sendMessageByUserName = (userName, message) ->
   user = slack.getUserByName userName
   dmOpened = slack.openDM user.id
+  console.log 'user ID'
+  console.log user.id
   console.log 'dmOpened'
   console.log dmOpened
   if dmOpened
