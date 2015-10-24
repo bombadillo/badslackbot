@@ -1,5 +1,5 @@
 fs = require 'fs'
-config = require '../config'
+config = require '../../common/config'
 os = require 'os'
 
 info = (message) ->

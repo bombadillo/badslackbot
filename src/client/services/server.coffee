@@ -11,6 +11,7 @@ start = ->
   app.set('view engine', 'ejs')
 
   app.get('/', (request, response) ->
+    logs = logRetriever.get()
     response.render('pages/index', { logs: logs })
   )
 

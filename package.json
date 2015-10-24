@@ -8,13 +8,14 @@
     "mocha": "*",
     "slack-client": "^1.4.1",
     "express": "4.13.3",
-    "ejs": "2.3.3"
+    "ejs": "2.3.3",
+    "ncp": "2.0.0"
   },
   "scripts": {
     "test": "mocha",
-    "brewCoffee": "coffee -o dist/ -c src/",
+    "brewCoffee": "coffee -o dist/ -c src/ && ncp src/client/views dist/client/views",
     "hotCoffee": "coffee -o dist/ -cw src/",
     "hotTests": "coffee -cwo spec/ spec/",
-    "postinstall": "npm run brewCoffee"
+    "postinstall": "npm run brewCoffee && ncp src/client/views dist/client/views"
   }
 }

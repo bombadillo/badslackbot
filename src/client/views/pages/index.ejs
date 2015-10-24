@@ -5,6 +5,12 @@
 
   <body>
     <h3>Logs...</h3>
-    <div id="logs"></div>
+    <div id="logs">
+      <ul>
+      <% for(var i=0; i<logs.length; i++) {%>
+         <li><%= logs[i] %></li>
+      <% } %>
+      </ul>
+    </div>
   </body>
 </html>
