@@ -4,7 +4,7 @@ os = require 'os'
 
 info = (message) ->
   messageObject = message: "#{message}"
-  messageString = JSON.stringify(messageObject) + os.EOL
+  messageString = ',' + JSON.stringify(messageObject) + os.EOL
   fs.appendFile config.logFile, messageString, errorHandler
 
 errorHandler = (err) ->
