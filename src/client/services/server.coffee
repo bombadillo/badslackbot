@@ -11,8 +11,10 @@ start = ->
   app.set('view engine', 'ejs')
 
   app.get('/', (request, response) ->
-    logs = logRetriever.get()
-    response.render('pages/index', { logs: logs })
+    logRetriever.get().then((logs) ->
+      console.log logs
+      response.render('pages/index', { logs: logs })
+    )
   )
 
   app.listen(app.get('port'), ->
