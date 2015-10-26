@@ -14,9 +14,9 @@
   },
   "scripts": {
     "test": "mocha",
-    "brewCoffee": "coffee -o dist/ -c src/ && ncp src/client/views dist/client/views",
+    "brewCoffee": "coffee -o dist/ -c src/ && ncp src/client dist/client",
     "hotCoffee": "coffee -o dist/ -cw src/",
     "hotTests": "coffee -cwo spec/ spec/",
-    "postinstall": "npm run brewCoffee && ncp src/client/views dist/client/views"
+    "postinstall": "npm run brewCoffee && ncp src/client dist/client"
   }
 }

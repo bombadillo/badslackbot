@@ -1,5 +1,5 @@
 config =
-  botApiToken: 'xoxb-12829876867-OwuLug29QDjzRp4tNmArluf9'
+  botApiToken: 'xoxb-12814321463-qOXF67UK8QkEBEGRlsIVi1hY'
   logFile: __dirname + '/../../log.json'
 
 module.exports = config

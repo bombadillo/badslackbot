@@ -2,9 +2,9 @@ fs = require 'fs'
 config = require '../../common/config'
 os = require 'os'
 
-info = (message) ->
-  messageObject = message: "#{message}"
-  messageString = ',' + JSON.stringify(messageObject) + os.EOL
+archiveToFlatFile = (message, user) ->
+  messageObject = message: message, user: user
+  messageString = JSON.stringify(messageObject) + ',' + os.EOL
   fs.appendFile config.logFile, messageString, errorHandler
 
 errorHandler = (err) ->
@@ -12,4 +12,4 @@ errorHandler = (err) ->
     console.log err
 
 exports = this
-exports.info = info
+exports.archiveToFlatFile = archiveToFlatFile

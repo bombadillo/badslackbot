@@ -1,16 +1,25 @@
 <html>
   <head>
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/index.css" media="screen" title="no title" charset="utf-8">
     <title>Bad slack bot: logs</title>
   </head>
 
   <body>
-    <h3>Logs...</h3>
-    <div id="logs">
-      <ul>
-      <% for(var i=0; i<logs.length; i++) {%>
-         <li><%= logs[i].message %></li>
-      <% } %>
-      </ul>
+    <div class="container">
+      <div class="row">
+          <div class="twelve column">
+            <div id="logs">
+              <h3>Logs...</h3>
+              <ul>
+              <% for(var i=0; i<logs.length; i++) {%>
+                 <li class="log-item"><%= logs[i].message %> <i>sent to <%= logs[i].user %></i></li>
+              <% } %>
+              </ul>
+            </div>
+          </div>
+        </div>
     </div>
   </body>
 </html>

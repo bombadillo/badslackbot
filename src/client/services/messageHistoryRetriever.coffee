@@ -1,13 +1,13 @@
 fs = require 'fs'
 config = require '../../common/config'
 q = require 'q'
-logToArray = require './convertLogDataToArray'
+logToArray = require './convertMessageHistoryData'
 
 get = ->
   deferred = q.defer()
   fs.readFile(config.logFile, 'utf8', (err, data) ->
     if !err
-      data = logToArray.convert data
+      data = logToArray.convertToArray data
       deferred.resolve data
     else
       deferred.resolve {}
