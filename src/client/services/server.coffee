@@ -1,6 +1,8 @@
-express = require('express')
-app = express()
+express = require 'express'
+server = require('http').Server app
+io = require('socket.io')(server)
 logRetriever = require './logRetriever'
+app = express()
 
 start = ->
   app.set('port', (process.env.PORT || 5000))
