@@ -1,7 +1,6 @@
 express = require('express')
 app = express()
 logRetriever = require './messageHistoryRetriever'
-stayAlive = require './stayAlive'
 
 start = ->
   app.set('port', (process.env.PORT || 5000))
@@ -21,8 +20,6 @@ start = ->
   app.listen(app.get('port'), ->
     console.log('The app is running on port', app.get('port'))
   )
-
-  stayAlive.stayAlive()
 
 exports = this
 exports.start = start
