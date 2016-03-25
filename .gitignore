@@ -2,3 +2,5 @@ node_modules
 npm-debug.log
 src/**/*.js
 dist
+annoyOutput.json
+log.txt

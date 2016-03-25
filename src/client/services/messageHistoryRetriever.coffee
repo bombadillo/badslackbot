@@ -5,7 +5,7 @@ logToArray = require './convertMessageHistoryData'
 
 get = ->
   deferred = q.defer()
-  fs.readFile(config.logFile, 'utf8', (err, data) ->
+  fs.readFile(config.annoyOutputFile, 'utf8', (err, data) ->
     if !err
       data = logToArray.convertToArray data
       deferred.resolve data

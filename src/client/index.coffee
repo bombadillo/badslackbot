@@ -1,14 +1,14 @@
 express = require('express')
 app = express()
-logRetriever = require './messageHistoryRetriever'
+logRetriever = require './services/messageHistoryRetriever'
 
 start = ->
   app.set('port', (process.env.PORT || 5000))
 
   console.log __dirname
-  app.use(express.static(__dirname + '/../'))
+  app.use(express.static(__dirname))
 
-  app.set('views', __dirname + "/../views")
+  app.set('views', __dirname + "\\views")
   app.set('view engine', 'ejs')
 
   app.get('/', (request, response) ->

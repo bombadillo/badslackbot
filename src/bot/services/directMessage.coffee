@@ -1,4 +1,4 @@
-slack = require '../slackClient'
+slack = require './slackClient'
 
 sendMessageByUserName = (userName, message) ->
   user = slack.getUserByName userName

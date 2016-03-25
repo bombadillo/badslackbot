@@ -1,5 +1,5 @@
 bot = require './bot/index'
-server = require './client/services/server'
+server = require './client/index'
 
 bot.start()
 server.start()

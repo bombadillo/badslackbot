@@ -1,4 +1,4 @@
-slack = require '../slackClient'
+slack = require './slackClient'
 isNumeric = require './isNumeric'
 
 getUserName = (userId) ->

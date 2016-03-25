@@ -1,7 +1,7 @@
 slack = require './slackClient'
-directMessage = require './services/directMessage'
-horribleNameGenerator = require './services/horribleNameGenerator'
-archiver = require './services/messageArchiver'
+directMessage = require './directMessage'
+horribleNameGenerator = require './horribleNameGenerator'
+archiver = require './messageArchiver'
 
 annoyUser = (userName) ->
   horrbileName = horribleNameGenerator.generate()

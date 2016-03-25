@@ -1,7 +1,7 @@
 slack = require './slackClient'
-userService = require './services/user'
-channel = require './services/channel'
-userNameRetriever = require './services/userNameRetriever'
+userService = require './user'
+channel = require './channel'
+userNameRetriever = require './userNameRetriever'
 
 shouldIAnnoyUser = (message) ->
   if message.text.match 'annoy'
