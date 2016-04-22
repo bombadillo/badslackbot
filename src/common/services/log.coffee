@@ -25,7 +25,7 @@ error = (message) ->
 
 debug = (message) ->
   console.log colors.debug(message)
-  writeToFile message, 'info'
+  writeToFile message, 'debug'
 
 writeToFile = (message, level) ->
   date = dateFormat(new Date(), 'dd/mm/yyyy hh:MM:ss')

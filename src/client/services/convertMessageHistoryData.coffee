@@ -1,11 +1,9 @@
+lastCharRemover = require '../../common/services/lastCharacterInstanceRemover'
+
 convertToArray = (data) ->
-  data = removeLastComma data
+  data = lastCharRemover.remove ',', data
   data = "[#{data}]"
   return JSON.parse data
-
-removeLastComma = (data) ->
-  pos = data.lastIndexOf ','
-  data = data.substring(0,pos) + data.substring(pos+1)
 
 exports = this
 exports.convertToArray = convertToArray

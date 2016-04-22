@@ -6,7 +6,7 @@
   "dependencies": {
     "coffee-script": "1.9.0",
     "mocha": "*",
-    "slack-client": "^1.4.1",
+    "@slack/client": "*",
     "express": "4.13.3",
     "ejs": "2.3.3",
     "ncp": "2.0.0",

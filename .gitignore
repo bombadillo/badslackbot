@@ -4,3 +4,4 @@ src/**/*.js
 dist
 annoyOutput.json
 log.txt
+.vscode

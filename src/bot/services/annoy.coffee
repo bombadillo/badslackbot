@@ -1,5 +1,5 @@
-slack = require './slackClient'
-directMessage = require './directMessage'
+slack = require './slack/slackClient'
+directMessage = require './directMessage/sender'
 horribleNameGenerator = require './horribleNameGenerator'
 archiver = require './messageArchiver'
 

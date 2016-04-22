@@ -1,16 +1,18 @@
-slack = require './services/slackClient'
+slack = require './services/slack/slackClient'
 shouldIAnnoy = require './services/shouldIAnnoy'
 annoy = require './services/annoy'
 log = require '../common/services/log'
+broadcastNextVictim = require './services/broadcastNextVictim'
 
 start = ->
   slack.on 'open', ->
-    log.info "Connected to #{slack.team.name} as @#{slack.self.name}"
+    log.info "Connected to slack"
 
   slack.on 'message', (message) ->
-    shouldIAnnoyCurrentUser = shouldIAnnoy.shouldIAnnoyUser message
-    if shouldIAnnoyCurrentUser
-      userToAnnoy = shouldIAnnoyCurrentUser
+    iShouldIAnnoyUser = shouldIAnnoy.shouldIAnnoyUser message
+    if iShouldIAnnoyUser
+      userToAnnoy = iShouldIAnnoyUser
+      broadcastNextVictim message, userToAnnoy
       annoy.annoyUser userToAnnoy
 
   slack.on 'error', (err) ->

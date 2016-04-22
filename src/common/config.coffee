@@ -1,5 +1,5 @@
 config =
-  botApiToken: 'xoxb-12814321463-qOXF67UK8QkEBEGRlsIVi1hY'
+  botApiToken: ''
   annoyOutputFile: __dirname + '/../../annoyOutput.json'
   logFile: __dirname + '/../../log.txt'
 
